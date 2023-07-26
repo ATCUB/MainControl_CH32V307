@@ -106,6 +106,7 @@ int main(void)
 	GPIO_Toggle_INIT();
 	MY_USART_Init(115200);
 	DMA_INIT();
+	CAN_Test_Mode_Init( CAN_SJW_1tq, CAN_BS2_3tq, CAN_BS1_2tq, 6, CAN_Mode_Normal );
 		
 	printf("SystemClk:%d\r\n",SystemCoreClock);
 	printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
