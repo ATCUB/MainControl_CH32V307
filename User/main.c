@@ -106,7 +106,7 @@ int main(void)
 	GPIO_Toggle_INIT();
 	MY_USART_Init(115200);
 	DMA_INIT();
-	CAN_Test_Mode_Init( CAN_SJW_1tq, CAN_BS2_3tq, CAN_BS1_2tq, 6, CAN_Mode_Normal );
+	CAN_Test_Mode_Init( CAN_SJW_1tq, CAN_BS2_2tq, CAN_BS1_9tq, 4, CAN_Mode_Normal );
 		
 	printf("SystemClk:%d\r\n",SystemCoreClock);
 	printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
@@ -193,7 +193,7 @@ void Order_dect(void const * argument)
         {
             //初始化CAN数据包
             Motor_move = 0;
-//            printf("receive restore order:'%s'\r\n", order_buffer);
+            printf("receive restore order:'%s'\r\n", order_buffer);
             //运行中
             finish_flag = 2;
             //计算指令对于的索引index
